@@ -1,0 +1,304 @@
+.telo {
+  background-color: rgb(37, 35, 35);
+  height: 1100px;
+  width: 1652px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-left: 286px;
+}
+
+
+.flexovi {
+  height: 183px;
+  width: 1365px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(37, 35, 35);
+}
+/* Fleksovi */
+.prvi-flex {
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+.drugi-flex {
+  height: 70px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.treci-flex {
+  display: flex;
+  height: 1200px;
+  margin-top: 0px;
+  z-index: 1;
+  flex-direction: column;
+}
+/* Prvi fleks */
+.logo {
+ width: 120px;
+}
+
+.naslov {
+ flex: 1;
+}
+
+.fb {
+ width: 90px;
+}
+/* Slike prvog fleksa */
+.grb {
+  height: 105px;
+  width: 120px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+.tekst {
+  height: 70px;
+  width: 550px;
+  margin-top: 20px;
+}
+
+.fb-link {
+  width: 30px;
+  height: 80px;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-left: -5px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  padding-right: -6px;
+  display: inline-block;
+}
+
+.fb-logo {
+  height: 80px;
+  width: 80px;
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  margin-top: 0px;
+}
+/* Drugi fleks */
+.klikni {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+  .tooltip-statistika {
+    opacity: 1;
+    transition: 0.8s;
+  }
+  .tooltip-tekst {
+    opacity: 1;
+  }
+}
+
+.klikni-tekst {
+  font-size: 32px;
+  margin-top: 10px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: rgb(197, 152, 53);
+}
+
+.tekme {
+  text-decoration: none;
+  width: 227.5px;
+}
+
+.klikni:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+}
+
+.tooltip-div {
+  flex: 1;
+}
+
+.tooltip-div:hover {
+ background-color: rgb(145, 139, 128);
+ transition: 0.7s;
+}
+
+.tooltip-statistika {
+  display: flex;
+  flex-direction: column;
+  height: 125px;
+  width: 215px;
+  background-color: rgba(219, 219, 219, 0.877);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35, 0.4);
+  border-width: 0.6px;
+  opacity: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 3;
+  top: 4px;
+}
+
+.tooltip-tekst {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial;
+  opacity: 0;
+}
+
+/* Treći fleks */
+.test {
+  color: white;
+  font-size: 50px;
+}
+
+.sub-flex-1 {
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sub-flex-2 {
+  height: 460px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sub-flex-3 {
+  height: 200px;
+}
+
+/* Paragrafovi trecheg fleksa */
+.prijave {
+  width: 800px;
+  background-color: rgb(197, 152, 53);
+  border-radius: 10px;
+}
+
+.prijave-paragraf {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 3px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: black;
+}
+
+.mvp-paragraf {
+  font-size: 22px;
+  margin-top: 2px;
+  margin-left: 50px;
+  text-align: center;
+  font-weight: normal;
+  margin-left: 3px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: black;
+}
+
+.dicmo-2k24 {
+  height: 380px;
+  width: 570px;
+  margin-left: 100px;
+}
+
+.rezultati {
+  display: flex;
+  flex-direction: column;
+  width: 555px;
+  margin-left: 10px;
+  font-size: 30px;
+  background-color: rgba(219, 219, 219, 0.877);
+}
+
+.rezultati-paragraf {
+  color: black;
+  font-size: 30px;
+  font-family: Segoe UI;
+  text-align: center;
+}
+
+.ovo-kolo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 550px;
+  margin-top: 29px;
+  margin-left: 2.5px;
+  background-color: lightgray;
+}
+
+.iduce-kolo {
+  height: 300px;
+  width: 350px;
+  margin-top: 120px;
+  background-color: lightgray;
+}
+
+.mini-tekma {
+  height: 45px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.karte {
+  width: 700px;
+}
+
+.kontakt {
+  font-size: 40px;
+  color: black;
+  font-family: Segoe UI;
+  margin-left: 15px;
+}
+
+.kontakt-div {
+ width: 610px;
+ height: 450px;
+ background-color: rgb(197, 152, 53);
+ margin-left: 55px;
+ margin-right: 30px;
+ border-radius: 10px;
+}

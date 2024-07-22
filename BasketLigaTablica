@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <title>Utakmice</title>
+  <meta name="description" content="Košarkaška liga Dicmo. Lokalna liga u košarci."/>
+  <meta name="googlebot-news" content="noindex">
+  <meta property="og:title" content="Basket Liga Dicmo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="canonical" href="https://www.basketligadicmo.com" />
+  <link rel="stylesheet" href="BasketLigaUtakmice.css">
+</head>
+
+<body class="telo">
+
+<div class="flexovi">
+<div class="prvi-flex">
+  <div class="logo"><img class="grb" src="logo.png"></div>
+  <div class="naslov"><img class="tekst" src="tekst-1.png"><img class="tekst" src="tekst-2.png"></div>
+  <div class="fb"><a href="https://www.facebook.com/BasketLigaDicmo" class="fb-link" target="blank"><img class="fb-logo" src="Facebook.ico"></a></div>
+</div>
+
+<div class="drugi-flex">
+  <div class="klikni"><a class="tekme" href="BasketLigaNaslovnica.html" target="_self"><p class="klikni-tekst">NASLOVNICA</p></a></div>
+  <div class="klikni"><a class="tekme" href="BasketLigaUtakmice.html" target="_self"><p class="klikni-tekst">UTAKMICE</p></a></div>
+  <div class="stats"><p class="klikni-tekst">STATISTIKA</p>
+    <span class="tooltip-statistika"><div class="tooltip-div"><p class="tooltip-tekst">TABLICA</div>
+      <div class="tooltip-div"><a class="tekme" href="BasketLigaNajbolji.html" target="_self"></a><p class="tooltip-tekst">NAJBOLJI</p></a></div>
+        <div class="tooltip-div"><p class="tooltip-tekst">EKIPNO</div>
+  </span></div>
+  <div class="klikni"><p class="klikni-tekst">ARHIVA</p></div>
+  <div class="klikni"><p class="klikni-tekst">GALERIJA</p></div>
+  <div class="klikni"><p class="klikni-tekst">PRIJAVE</p></div>
+</div>
+</div>
+
+<div class="treci-flex">
+  <table style="width:80%">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table>
+ </div>

@@ -1,0 +1,178 @@
+.html {
+  width: 1365px;
+}
+
+.telo {
+  background-color: rgb(37, 35, 35);
+  height: 1100px;
+  width: 1365px;
+  margin-left: 286px;
+  margin-top: 0px;
+}
+
+
+.flexovi {
+  height: 183px;
+  width: 1365px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(37, 35, 35);
+}
+/* Fleksovi */
+.prvi-flex {
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+.drugi-flex {
+  height: 70px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.treci-flex {
+  display: flex;
+  height: 1200px;
+  margin-top: 0px;
+  z-index: 1;
+  flex-direction: column;
+  margin-left: 30px;
+}
+/* Prvi fleks */
+.logo {
+ width: 120px;
+}
+
+.naslov {
+ flex: 1;
+}
+
+.fb {
+ width: 90px;
+}
+/* Slike prvog fleksa */
+.grb {
+  height: 105px;
+  width: 120px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+.tekst {
+  height: 70px;
+  width: 550px;
+  margin-top: 20px;
+}
+
+.fb-link {
+  width: 30px;
+  height: 80px;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-left: -5px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  padding-right: -6px;
+  display: inline-block;
+}
+
+.fb-logo {
+  height: 80px;
+  width: 80px;
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  margin-top: 0px;
+}
+/* Drugi fleks */
+.klikni {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+  .tooltip-statistika {
+    opacity: 1;
+    transition: 0.8s;
+  }
+  .tooltip-tekst {
+    opacity: 1;
+  }
+}
+
+.klikni-tekst {
+  font-size: 32px;
+  margin-top: 10px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: rgb(197, 152, 53);
+}
+
+.klikni:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+}
+
+.tooltip-div {
+  flex: 1;
+}
+
+.tooltip-statistika {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 215px;
+  background-color: rgba(219, 219, 219, 0.877);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35, 0.4);
+  border-width: 0.6px;
+  opacity: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 3;
+  top: 4px;
+}
+
+.tooltip-tekst {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial;
+  opacity: 0;
+}
+
+/* Treći fleks */

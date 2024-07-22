@@ -1,0 +1,283 @@
+.telo {
+  background-color: rgb(37, 35, 35);
+  height: 3300px;
+  width: 1652px;
+  margin-left: 286px;
+  margin-top: 0px;
+  overflow: scroll;
+}
+
+.flexovi {
+  height: 183px;
+  width: 1365px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(37, 35, 35);
+}
+/* Fleksovi */
+.prvi-flex {
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+.drugi-flex {
+  height: 70px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.treci-flex {
+  display: flex;
+  height: 3000px;
+  margin-top: 0px;
+  z-index: 1;
+  margin-left: 35px;
+  flex-direction: column;
+}
+/* Prvi fleks */
+.logo {
+ width: 120px;
+}
+
+.naslov {
+ flex: 1;
+}
+
+.fb {
+ width: 90px;
+}
+/* Slike prvog fleksa */
+.grb {
+  height: 105px;
+  width: 120px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+.tekst {
+  height: 70px;
+  width: 550px;
+  margin-top: 20px;
+}
+
+.fb-link {
+  width: 30px;
+  height: 80px;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-left: -5px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  padding-right: -6px;
+  display: inline-block;
+}
+
+.fb-logo {
+  height: 80px;
+  width: 80px;
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  margin-top: 0px;
+}
+/* Drugi fleks */
+.klikni {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+  .tooltip-statistika {
+    opacity: 1;
+    transition: 0.8s;
+  }
+  .tooltip-tekst {
+    opacity: 1;
+  }
+}
+
+.tekme {
+  text-decoration: none;
+  width: 227.5px;
+}
+
+.klikni-tekst {
+  font-size: 32px;
+  margin-top: 10px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: rgb(197, 152, 53);
+}
+
+.klikni:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+}
+
+.tooltip-div {
+  flex: 1;
+}
+
+.tooltip-div:hover {
+  background-color: rgb(145, 139, 128);
+  transition: 0.7s;
+ }
+
+.tooltip-statistika {
+  display: flex;
+  flex-direction: column;
+  height: 125px;
+  width: 215px;
+  background-color: rgba(219, 219, 219, 0.877);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35, 0.4);
+  border-width: 0.6px;
+  opacity: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 3;
+  top: 4px;
+}
+
+.tooltip-tekst {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial;
+  opacity: 0;
+}
+
+/* Treći fleks */
+.container {
+  max-width: 1000px;
+  margin-left: 280px;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    width: 480px;
+    height: 20px;
+    margin-left: 66px;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    width: 480px;
+    height: 20px;
+    margin-left: 66px;
+    margin-bottom: 4px;
+  }
+  .table-row-4 {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    width: 480px;
+    height: 20px;
+    margin-left: 66px;
+    margin-bottom: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: rgb(145, 139, 128)
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row{
+      
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}

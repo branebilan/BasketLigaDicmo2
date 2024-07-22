@@ -1,0 +1,273 @@
+.telo {
+  background-color: rgb(37, 35, 35);
+  height: 1100px;
+  width: 1652px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-left: 286px;
+}
+
+
+.flexovi {
+  height: 183px;
+  width: 1365px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(37, 35, 35);
+}
+/* Fleksovi */
+.prvi-flex {
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+}
+
+.drugi-flex {
+  height: 70px;
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.treci-flex {
+  display: flex;
+  height: 1200px;
+  margin-top: 0px;
+  z-index: 1;
+  flex-direction: column;
+}
+/* Prvi fleks */
+.logo {
+ width: 120px;
+}
+
+.naslov {
+ flex: 1;
+}
+
+.fb {
+ width: 90px;
+}
+/* Slike prvog fleksa */
+.grb {
+  height: 105px;
+  width: 120px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+
+.tekst {
+  height: 70px;
+  width: 550px;
+  margin-top: 20px;
+}
+
+.fb-link {
+  width: 30px;
+  height: 80px;
+  margin-left: 0px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  margin-left: -5px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 2px;
+  padding-right: -6px;
+  display: inline-block;
+}
+
+.fb-logo {
+  height: 80px;
+  width: 80px;
+  padding-left: 0px;
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+  margin-top: 0px;
+}
+/* Drugi fleks */
+.klikni {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.stats {
+  flex: 1;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+  .tooltip-statistika {
+    opacity: 1;
+    transition: 0.8s;
+  }
+  .tooltip-tekst {
+    opacity: 1;
+  }
+}
+
+.klikni-tekst {
+  font-size: 32px;
+  margin-top: 10px;
+  font-family: Segoe UI;
+  text-align: center;
+  color: rgb(197, 152, 53);
+}
+
+.tekme {
+  text-decoration: none;
+  width: 227.5px;
+}
+
+.klikni:hover {
+  border-radius: 10px;
+  background-color: rgb(197, 152, 53);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.7s;
+  .klikni-tekst {
+    color: rgb(37, 35, 35);
+  }
+}
+
+.tooltip-div {
+  flex: 1;
+}
+
+.tooltip-div:hover {
+ background-color: rgb(145, 139, 128);
+ transition: 0.7s;
+}
+
+.tooltip-statistika {
+  display: flex;
+  flex-direction: column;
+  height: 125px;
+  width: 215px;
+  background-color: rgba(219, 219, 219, 0.877);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(37, 35, 35, 0.4);
+  border-width: 0.6px;
+  opacity: 0;
+  margin-top: 0px;
+  padding-bottom: 15px;
+  position: absolute;
+  z-index: 3;
+  top: 4px;
+}
+
+.tooltip-tekst {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  font-family: Arial;
+  opacity: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
