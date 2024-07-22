@@ -1,3 +1,7 @@
+@media screen and (max-width: 600px) {
+    width: 50%;
+}
+
 .telo {
   background-color: rgb(37, 35, 35);
   height: 3300px;
@@ -254,30 +258,6 @@ h2 {
   }
   
   @media all and (max-width: 767px) {
-    .table-header {
-      display: none;
-    }
-    .table-row{
-      
-    }
-    li {
-      display: block;
-    }
-    .col {
-      
-      flex-basis: 100%;
-      
-    }
-    .col {
-      display: flex;
-      padding: 10px 0;
-      &:before {
-        color: #6C7A89;
-        padding-right: 10px;
-        content: attr(data-label);
-        flex-basis: 50%;
-        text-align: right;
-      }
-    }
-  }
+
+    
 }
