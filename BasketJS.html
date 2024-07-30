@@ -1,0 +1,120 @@
+<script>
+let team1 = {
+  name: "dicmoVruchina",
+  points: 2,
+  scores: 21,
+  against: 11,
+  wins: 1,
+  losses: 0,
+};
+
+team1.diff = team1.scores - team1.against;
+
+
+console.log(team1.diff);
+
+let team2 = {
+  name: "buttPluggers",
+  points: 2,
+  scores: 24,
+  against: 22,
+  wins: 1,
+  losses: 0,
+};
+
+team2.diff = team2.scores - team2.against;
+
+console.log(team2.diff);
+
+let team3 = {
+  name: "onaNova",
+  points: 2,
+  scores: 21,
+  against: 19,
+  wins: 1,
+  losses: 0,
+};
+
+team3.diff = team3.scores - team3.against;
+
+console.log(team3.diff);
+
+let team4 = {
+  name: "profesionalci",
+  points: 1,
+  scores: 11,
+  against: 21,
+  wins: 0,
+  losses: 1,
+};
+
+team4.diff = team4.scores - team4.against;
+
+console.log(team4.diff);
+
+let team5 = {
+  name: "noName",
+  points: 1,
+  scores: 19,
+  against: 21,
+  wins: 0,
+  losses: 1,
+};
+
+team5.diff = team5.scores - team5.against;
+
+console.log(team5.diff);
+
+let team6 = {
+  name: "grcici",
+  points: 1,
+  scores: 22,
+  against: 24,
+  wins: 0,
+  losses: 1,
+};
+
+team6.diff = team6.scores - team6.against;
+
+console.log(team6.diff);
+ 
+
+let tabela = [];
+tabela.push(team1.wins);
+tabela.push(team2.wins);
+tabela.push(team3.wins);
+tabela.push(team4.wins);
+tabela.push(team5.wins);
+tabela.push(team6.wins);
+tabela.sort((a, b) => b - a);
+console.log(`1. ${tabela[0]}, 2. ${tabela[1]}, 3. ${tabela[2]}, 4. ${tabela[3]}, 5. ${tabela[4]}, 6. ${tabela[5]}`);
+
+function matchDay(homeTeam, awayTeam, scoreHome, scoreAway) {
+
+  if (scoreHome > scoreAway) {
+    homeTeam.points = homeTeam.points + 2;
+    awayTeam.points = awayTeam.points + 1;
+    homeTeam.wins = homeTeam.wins + 1;
+    awayTeam.losses = awayTeam.losses + 1;
+    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
+  }
+  
+  else if (scoreAway > scoreHome) {
+    awayTeam.points = awayTeam.points + 2;
+    homeTeam.points = homeTeam.points + 1;
+    awayTeam.wins = awayTeam.wins + 1;
+    homeTeam.losses = homeTeam.losses + 1;
+    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
+  }
+  
+  homeTeam.scores = homeTeam.scores + scoreHome;
+  awayTeam.scores = awayTeam.scores + scoreAway;
+  homeTeam.against = homeTeam.against + scoreAway;
+  awayTeam.against = awayTeam.against + scoreHome;
+
+  console.log(homeTeam.scores, awayTeam.scores, homeTeam.diff, awayTeam.diff);
+}
+  
+</script>
+
+
