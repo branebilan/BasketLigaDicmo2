@@ -155,6 +155,3 @@ function matchDay(homeTeam, awayTeam, scoreHome, scoreAway) {
 
   console.log(homeTeam.scores, awayTeam.scores, homeTeam.diff, awayTeam.diff);
 }
-
-
-

@@ -194,6 +194,14 @@
   padding-right: 10px;
 }
 
+.container-dva {
+  max-width: 1000px;
+  margin-left: 40px;
+  margin-right: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 h2 {
   font-size: 26px;
   margin: 20px 0;
