@@ -613,12 +613,6 @@ player22.freethrows_percentage = (player22.freethrows_hit / player22.freethrows_
 
 // Automatizacija statistike u HTML paragrafima i poretka najboljih po statistikama:
 
-let playerOne = [player1.points, player1.rebounds, player1.assists, player1.blocks, player1.stolen, `${player1.shots_hit}|${player1.shots_missed}`, `${player1.three_hit}|${player1.three_missed}`, player1.freethrows_percentage];
-for (let i = 0; i < playerOne.length; i++) {
-  const element = document.querySelector('.element-01' + i);
-  element.append(playerOne[i]);
-}
-
 // Ulomak za najbolje:
 
 let playersPoints = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22];
