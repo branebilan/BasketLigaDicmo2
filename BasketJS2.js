@@ -615,6 +615,7 @@ player22.freethrows_percentage = (player22.freethrows_hit / player22.freethrows_
 
 // Ulomak za najbolje:
 
+function playerBest() {
 let playersPoints = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22];
 const poredak = playersPoints.map(({ name, points_average }) => ({ name, points_average })).sort((a,b) => b.points_average - a.points_average);
 
@@ -742,6 +743,9 @@ const elementno47 = document.querySelector('.ft-trechi-ime');
 elementno47.append(poredakFt[2].name);
 const elementno48 = document.querySelector('.ft-trechi-broj'); 
 elementno48.append(`${poredakFt[2].freethrows_percentage} %`);
+}
+
+playerBest();
 
 // Ulomak za HTML paragrafe:
 
