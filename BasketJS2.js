@@ -1,6 +1,6 @@
 // Kreiranje igrača/objekata:
 
-export let player1 = {
+export let =  player1 {
   name: "Ivan Maretić",
   matches: 1,
   points: 9,
@@ -15,6 +15,8 @@ export let player1 = {
   freethrows_hit: 0,
   freethrows_missed: 1
 }
+
+export let = 
 
 player1.points_average = player1.points / player1.matches;
 player1.rebounds_average = player1.rebounds / player1.matches;
@@ -777,6 +779,12 @@ function matchStats(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, th
   element07.append(`${thrhit}/${thrmiss}`);
   const element08 = document.querySelector('.p01-ft-pct');
   element08.append(`${frthit}/${frtmiss}`);
+}
+
+let playerJedan = [player1.points, player1.rebounds, player1.assists, player1.blocks, player1.stolen, `${player1.shots_hit}|${player1.shots_missed}`, `${player1.three_hit}|${player1.three_missed}`, player1.freethrows_percentage];
+for (let i = 0; i < playerJedan.length; i++) {
+  const element = document.querySelector('.element-01' + i);
+  element.append(playerJedan[i]);
 }
 
 function matchTwo(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, thrhit, thrmiss, frthit, frtmiss) {
