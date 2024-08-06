@@ -779,12 +779,6 @@ function matchStats(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, th
   element08.append(`${frthit}/${frtmiss}`);
 }
 
-let playerJedan = [player1.points, player1.rebounds, player1.assists, player1.blocks, player1.stolen, `${player1.shots_hit}|${player1.shots_missed}`, `${player1.three_hit}|${player1.three_missed}`, player1.freethrows_percentage];
-for (let i = 0; i < playerJedan.length; i++) {
-  const element = document.querySelector('.element-01' + i);
-  element.append(playerJedan[i]);
-}
-
 function matchTwo(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, thrhit, thrmiss, frthit, frtmiss) {
   playerNumber.points = playerNumber.points + pts;
   playerNumber.rebounds = playerNumber.rebounds + rbd;
