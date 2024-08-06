@@ -1,6 +1,6 @@
 // Kreiranje igrača/objekata:
 
-export let player1 = {
+let player1 = {
   name: "Ivan Maretić",
   matches: 1,
   points: 9,
@@ -611,8 +611,6 @@ player22.three_percentage = (player22.three_hit / player22.three_missed) * 100;
 player22.freethrows_percentage = (player22.freethrows_hit / player22.freethrows_missed) * 100;
 
 
-// Automatizacija statistike u HTML paragrafima i poretka najboljih po statistikama:
-
 // Ulomak za najbolje:
 
 function playerBest() {
@@ -745,13 +743,14 @@ const elementno48 = document.querySelector('.ft-trechi-broj');
 elementno48.append(`${poredakFt[2].freethrows_percentage} %`);
 }
 
-playerBest();
-
-// Ulomak za HTML paragrafe:
-
-
-// Funkcije:
-
+function playerStats() {
+  let playerOne = [player1.points_average, player1.assists_average, player1.rebounds_average, player1.blocks_average, player1.stolen_average, player1.shots_hit_average];
+  for (let i = 0; i < playerOne.length; i++){
+    const element = document.querySelector('.element-01' + i);
+    element.append(playerOne[i]);
+  }
+}
+  
 function matchStats(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, thrhit, thrmiss, frthit, frtmiss) {
   playerNumber.points = playerNumber.points + pts;
   playerNumber.rebounds = playerNumber.rebounds + rbd;
@@ -1000,3 +999,4 @@ function matchEight(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, th
   const element180 = document.querySelector('.p08-ft-pct');
   element180.append(`${frthit}/${frtmiss}`);
 }
+
