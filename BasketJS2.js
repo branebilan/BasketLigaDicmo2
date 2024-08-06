@@ -1,6 +1,6 @@
 // Kreiranje igrača/objekata:
 
-let player1 = {
+export let player1 = {
   name: "Ivan Maretić",
   matches: 1,
   points: 9,
@@ -743,14 +743,6 @@ const elementno48 = document.querySelector('.ft-trechi-broj');
 elementno48.append(`${poredakFt[2].freethrows_percentage} %`);
 }
 
-function playerStats() {
-  let playerOne = [player1.points_average, player1.assists_average, player1.rebounds_average, player1.blocks_average, player1.stolen_average, player1.shots_hit_average];
-  for (let i = 0; i < playerOne.length; i++){
-    const element = document.querySelector('.element-01' + i);
-    element.append(playerOne[i]);
-  }
-}
-  
 function matchStats(playerNumber, pts, rbd, ast, blk, stl, shothit, shotmiss, thrhit, thrmiss, frthit, frtmiss) {
   playerNumber.points = playerNumber.points + pts;
   playerNumber.rebounds = playerNumber.rebounds + rbd;
