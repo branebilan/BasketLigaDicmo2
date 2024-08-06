@@ -1,6 +1,6 @@
 // Kreiranje igrača/objekata:
 
-export let = player1 {
+export let player1 = {
   name: "Ivan Maretić",
   matches: 1,
   points: 9,
@@ -15,8 +15,6 @@ export let = player1 {
   freethrows_hit: 0,
   freethrows_missed: 1
 }
-
-export let = 
 
 player1.points_average = player1.points / player1.matches;
 player1.rebounds_average = player1.rebounds / player1.matches;
