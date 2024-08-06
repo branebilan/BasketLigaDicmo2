@@ -1,6 +1,6 @@
 // Kreiranje igrača/objekata:
 
-export let =  player1 {
+export let = player1 {
   name: "Ivan Maretić",
   matches: 1,
   points: 9,
