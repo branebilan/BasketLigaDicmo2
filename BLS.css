@@ -243,31 +243,31 @@ h2 {
     border-bottom-color: rgb(145, 139, 128)
   }
   .col-1 {
-    flex-basis: 11%;
+    flex-basis: 10%;
   }
   .col-2 {
-    flex-basis: 11%;
+    flex-basis: 1%;
   }
   .col-3 {
-    flex-basis: 11%;
+    flex-basis: 1%;
   }
   .col-4 {
-    flex-basis: 11%;
+    flex-basis: 2%;
   }
   .col-5 {
-    flex-basis: 11%;
+    flex-basis: 1%;
   }
   .col-6 {
-    flex-basis: 11%;
+    flex-basis: 1%;
   }
   .col-7 {
-    flex-basis: 11%;
+    flex-basis: 28%;
   }
   .col-8 {
-    flex-basis: 11%;
+    flex-basis: 28%;
   }
   .col-9 {
-    flex-basis: 12%;
+    flex-basis: 28%;
   }
   
   @media all and (max-width: 767px) {

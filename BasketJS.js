@@ -7,9 +7,6 @@ let team1 = {
   losses: 0,
 };
 
-team1.diff = team1.scores - team1.against;
-
-
 console.log(team1.diff);
 
 let team2 = {
@@ -20,8 +17,6 @@ let team2 = {
   wins: 1,
   losses: 0,
 };
-
-team2.diff = team2.scores - team2.against;
 
 console.log(team2.diff);
 
@@ -34,8 +29,6 @@ let team3 = {
   losses: 0,
 };
 
-team3.diff = team3.scores - team3.against;
-
 console.log(team3.diff);
 
 let team4 = {
@@ -46,8 +39,6 @@ let team4 = {
   wins: 0,
   losses: 1,
 };
-
-team4.diff = team4.scores - team4.against;
 
 console.log(team4.diff);
 
@@ -60,8 +51,6 @@ let team5 = {
   losses: 1,
 };
 
-team5.diff = team5.scores - team5.against;
-
 console.log(team5.diff);
 
 let team6 = {
@@ -73,10 +62,45 @@ let team6 = {
   losses: 1,
 };
 
-team6.diff = team6.scores - team6.against;
-
 console.log(team6.diff);
  
+
+function matchDay(homeTeam, awayTeam, scoreHome, scoreAway) {
+
+  if (scoreHome > scoreAway) {
+    homeTeam.points = homeTeam.points + 2;
+    awayTeam.points = awayTeam.points + 1;
+    homeTeam.wins = homeTeam.wins + 1;
+    awayTeam.losses = awayTeam.losses + 1;
+    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
+  }
+  
+  else if (scoreAway > scoreHome) {
+    awayTeam.points = awayTeam.points + 2;
+    homeTeam.points = homeTeam.points + 1;
+    awayTeam.wins = awayTeam.wins + 1;
+    homeTeam.losses = homeTeam.losses + 1;
+    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
+  }
+  
+  homeTeam.scores = homeTeam.scores + scoreHome;
+  awayTeam.scores = awayTeam.scores + scoreAway;
+  homeTeam.against = homeTeam.against + scoreAway;
+  awayTeam.against = awayTeam.against + scoreHome;
+
+  console.log(homeTeam.scores, awayTeam.scores, homeTeam.diff, awayTeam.diff);
+}
+
+matchDay(team2, team4, 21, 7);
+matchDay(team6, team5, 21, 10);
+matchDay(team1, team3, 21, 16);
+
+team1.diff = team1.scores - team1.against;
+team2.diff = team2.scores - team2.against;
+team3.diff = team3.scores - team3.against;
+team4.diff = team4.scores - team4.against;
+team5.diff = team5.scores - team5.against;
+team6.diff = team6.scores - team6.against;
 
 let teams = [team1, team2, team3, team4, team5, team6];
  const tabela = teams.map(({ name, wins, losses, scores, against, points, diff }) => ({ name, wins, losses, scores, against, points, diff })).sort((a,b) => b.wins - a.wins || b.diff - a.diff || b.scores - a.scores);
@@ -129,29 +153,3 @@ const element23 = document.querySelector('.poeni-sesti');
 element23.append(tabela[5].points);
 const element24 = document.querySelector('.razlika-sesti');
 element24.append(tabela[5].diff);
-
-function matchDay(homeTeam, awayTeam, scoreHome, scoreAway) {
-
-  if (scoreHome > scoreAway) {
-    homeTeam.points = homeTeam.points + 2;
-    awayTeam.points = awayTeam.points + 1;
-    homeTeam.wins = homeTeam.wins + 1;
-    awayTeam.losses = awayTeam.losses + 1;
-    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
-  }
-  
-  else if (scoreAway > scoreHome) {
-    awayTeam.points = awayTeam.points + 2;
-    homeTeam.points = homeTeam.points + 1;
-    awayTeam.wins = awayTeam.wins + 1;
-    homeTeam.losses = homeTeam.losses + 1;
-    console.log(homeTeam.points, awayTeam.points, homeTeam.wins, awayTeam.losses);
-  }
-  
-  homeTeam.scores = homeTeam.scores + scoreHome;
-  awayTeam.scores = awayTeam.scores + scoreAway;
-  homeTeam.against = homeTeam.against + scoreAway;
-  awayTeam.against = awayTeam.against + scoreHome;
-
-  console.log(homeTeam.scores, awayTeam.scores, homeTeam.diff, awayTeam.diff);
-}
