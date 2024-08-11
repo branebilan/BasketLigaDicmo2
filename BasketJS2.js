@@ -633,7 +633,7 @@ export function teamstatsOne() {
     element.append(playerThree[i]);
   }
 
-  let playerFive = [player5.points_average, player5.rebounds_average, player5.assists_average, player5.blocks_average, player5.stolen_average, `${player5.shots_percentage.toFixed(2)} %`, `${player5.three_percentage.toFixed(2)} %`, `${player5.freethrows_percentage} %`];
+  let playerFive = [player5.points_average, player5.rebounds_average, player5.assists_average.toFixed(2), player5.blocks_average.toFixed(2), player5.stolen_average.toFixed(2), `${player5.shots_percentage.toFixed(2)} %`, `${player5.three_percentage.toFixed(2)} %`, `${player5.freethrows_percentage} %`];
   for (let i = 0; i < playerFive.length; i++){
     const element = document.querySelector('.element-05' + i);
     element.append(playerFive[i]);
@@ -647,19 +647,19 @@ export function teamstatsOne() {
 } 
 
 export function teamstatsTwo() {
-  let playerSix = [player6.points_average, player6.rebounds_average, player6.assists_average, player6.blocks_average, player6.stolen_average, `${player6.shots_percentage.toFixed(2)} %`, `${player6.three_percentage.toFixed(2)} %`, `${player6.freethrows_percentage.toFixed(1)} %`];
+  let playerSix = [player6.points_average.toFixed(2), player6.rebounds_average.toFixed(2), player6.assists_average.toFixed(2), player6.blocks_average.toFixed(2), player6.stolen_average.toFixed(2), `${player6.shots_percentage.toFixed(2)} %`, `${player6.three_percentage.toFixed(2)} %`, `${player6.freethrows_percentage.toFixed(1)} %`];
   for (let i = 0; i < playerSix.length; i++){
     const element = document.querySelector('.element-06' + i);
     element.append(playerSix[i]);
   }
 
-  let playerSeven = [player7.points_average, player7.rebounds_average, player7.assists_average, player7.blocks_average, player7.stolen_average, `${player7.shots_percentage.toFixed(2)} %`, `${player7.three_percentage.toFixed(2)} %`, `${player7.freethrows_percentage} %`];
+  let playerSeven = [player7.points_average.toFixed(2), player7.rebounds_average.toFixed(2), player7.assists_average.toFixed(2), player7.blocks_average.toFixed(2), player7.stolen_average.toFixed(2), `${player7.shots_percentage.toFixed(2)} %`, `${player7.three_percentage.toFixed(2)} %`, `${player7.freethrows_percentage} %`];
   for (let i = 0; i < playerSeven.length; i++){
     const element = document.querySelector('.element-07' + i);
     element.append(playerSeven[i]);
   }
 
-  let playerEight = [player8.points_average, player8.rebounds_average, player8.assists_average, player8.blocks_average, player8.stolen_average, `${player8.shots_percentage.toFixed(2)} %`, `${player8.three_percentage.toFixed(2)} %`, `${player8.freethrows_percentage} %`];
+  let playerEight = [player8.points_average.toFixed(2), player8.rebounds_average.toFixed(2), player8.assists_average.toFixed(2), player8.blocks_average.toFixed(2), player8.stolen_average.toFixed(2), `${player8.shots_percentage.toFixed(2)} %`, `${player8.three_percentage.toFixed(2)} %`, `${player8.freethrows_percentage} %`];
   for (let i = 0; i < playerEight.length; i++){
     const element = document.querySelector('.element-08' + i);
     element.append(playerEight[i]);
@@ -691,7 +691,7 @@ export function teamstatsThree() {
     element.append(playerTen[i]);
   }
 
-  let playerEleven = [player11.points_average, player11.rebounds_average, player11.assists_average, player11.blocks_average, player11.stolen_average, `${player11.shots_percentage.toFixed(2)} %`, `${player11.three_percentage.toFixed(2)} %`, `${player11.freethrows_percentage} %`];
+  let playerEleven = [player11.points_average.toFixed(2), player11.rebounds_average.toFixed(2), player11.assists_average.toFixed(2), player11.blocks_average.toFixed(2), player11.stolen_average, `${player11.shots_percentage.toFixed(2)} %`, `${player11.three_percentage.toFixed(2)} %`, `${player11.freethrows_percentage} %`];
   for (let i = 0; i < playerEleven.length; i++){
     const element = document.querySelector('.element-11' + i);
     element.append(playerEleven[i]);
@@ -723,7 +723,7 @@ export function teamstatsFour() {
     element.append(playerTwelve[i]);
   }
 
-  let playerFifteen = [player15.points_average, player15.rebounds_average, player15.assists_average, player15.blocks_average, player15.stolen_average, `${player15.shots_percentage.toFixed(2)} %`, `${player15.three_percentage.toFixed(2)} %`, `${player15.freethrows_percentage} %`];
+  let playerFifteen = [player15.points_average, player15.rebounds_average.toFixed(2), player15.assists_average.toFixed(2), player15.blocks_average, player15.stolen_average, `${player15.shots_percentage.toFixed(2)} %`, `${player15.three_percentage.toFixed(2)} %`, `${player15.freethrows_percentage} %`];
   for (let i = 0; i < playerFifteen.length; i++){
     const element = document.querySelector('.element-15' + i);
     element.append(playerFifteen[i]);
@@ -767,7 +767,7 @@ export function teamstatsFive() {
     element.append(playerEighteen[i]);
   }
   
-  let playerNineteen = [player19.points_average, player19.rebounds_average, player19.assists_average, player19.blocks_average, player19.stolen_average, `${player19.shots_percentage.toFixed(2)} %`, `${player19.three_percentage.toFixed(2)} %`, `${player19.freethrows_percentage} %`];
+  let playerNineteen = [player19.points_average, player19.rebounds_average.toFixed(2), player19.assists_average.toFixed(2), player19.blocks_average, player19.stolen_average.toFixed(2), `${player19.shots_percentage.toFixed(2)} %`, `${player19.three_percentage.toFixed(2)} %`, `${player19.freethrows_percentage} %`];
   for (let i = 0; i < playerNineteen.length; i++){
     const element = document.querySelector('.element-19' + i);
     element.append(playerNineteen[i]);
@@ -781,19 +781,19 @@ export function teamstatsFive() {
 }
 
 export function teamstatsSix() {
-  let playerTwenty = [player20.points_average, player20.rebounds_average, player20.assists_average, player20.blocks_average, player20.stolen_average, `${player20.shots_percentage.toFixed(2)} %`, `${player20.three_percentage.toFixed(2)} %`, `${player20.freethrows_percentage} %`];
+  let playerTwenty = [player20.points_average.toFixed(2), player20.rebounds_average.toFixed(2), player20.assists_average.toFixed(2), player20.blocks_average.toFixed(2), player20.stolen_average.toFixed(2), `${player20.shots_percentage.toFixed(2)} %`, `${player20.three_percentage.toFixed(2)} %`, `${player20.freethrows_percentage} %`];
   for (let i = 0; i < playerTwenty.length; i++){
     const element = document.querySelector('.element-20' + i);
     element.append(playerTwenty[i]);
   }
 
-  let playerTwentyone = [player21.points_average, player21.rebounds_average, player21.assists_average, player21.blocks_average, player21.stolen_average, `${player21.shots_percentage.toFixed(2)} %`, `${player21.three_percentage.toFixed(2)} %`, `${player21.freethrows_percentage} %`];
+  let playerTwentyone = [player21.points_average.toFixed(2), player21.rebounds_average.toFixed(2), player21.assists_average.toFixed(2), player21.blocks_average.toFixed(2), player21.stolen_average.toFixed(2), `${player21.shots_percentage.toFixed(2)} %`, `${player21.three_percentage.toFixed(2)} %`, `${player21.freethrows_percentage} %`];
   for (let i = 0; i < playerTwentyone.length; i++){
     const element = document.querySelector('.element-21' + i);
     element.append(playerTwentyone[i]);
   }
 
-  let playerTwentytwo = [player22.points_average, player22.rebounds_average, player22.assists_average, player22.blocks_average, player22.stolen_average, `${player22.shots_percentage.toFixed(2)} %`, `${player22.three_percentage.toFixed(2)} %`, `${player22.freethrows_percentage} %`];
+  let playerTwentytwo = [player22.points_average.toFixed(2), player22.rebounds_average.toFixed(2), player22.assists_average.toFixed(2), player22.blocks_average.toFixed(2), player22.stolen_average.toFixed(2), `${player22.shots_percentage.toFixed(2)} %`, `${player22.three_percentage.toFixed(2)} %`, `${player22.freethrows_percentage} %`];
   for (let i = 0; i < playerTwentytwo.length; i++){
     const element = document.querySelector('.element-22' + i);
     element.append(playerTwentytwo[i]);
