@@ -1,5 +1,5 @@
 let team1 = {
-  name: "Dicmo Vruchina",
+  name: "Dicmo Vrućina",
   points: 2,
   scores: 21,
   against: 11,
@@ -94,6 +94,9 @@ function matchDay(homeTeam, awayTeam, scoreHome, scoreAway) {
 matchDay(team2, team4, 21, 7);
 matchDay(team6, team5, 21, 10);
 matchDay(team1, team3, 21, 16);
+matchDay(team6, team4, 21, 8);
+matchDay(team2, team3, 21, 11);
+matchDay(team1, team5, 21, 13);
 
 team1.diff = team1.scores - team1.against;
 team2.diff = team2.scores - team2.against;

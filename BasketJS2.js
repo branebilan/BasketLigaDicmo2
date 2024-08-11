@@ -114,7 +114,7 @@ let player8 = {
 }
 
 let player9 = {
-  name: "Ante Grčić",
+  name: "Ante Grčić sr.",
   matches: 1,
   points: 2,
   rebounds: 8,
@@ -125,6 +125,22 @@ let player9 = {
   shots_missed: 6,
   three_hit: 1,
   three_missed: 5,
+  freethrows_hit: 0,
+  freethrows_missed: 1
+}
+
+let player4 = {
+  name: "Ante Grčić jr.",
+  matches: 1,
+  points: 10,
+  rebounds: 9,
+  assists: 0,
+  blocks: 1,
+  stolen: 1,
+  shots_hit: 10,
+  shots_missed: 22,
+  three_hit: 0,
+  three_missed: 4,
   freethrows_hit: 0,
   freethrows_missed: 1
 }
@@ -433,48 +449,81 @@ let player28 = {
   freethrows_missed: 2
 }
 
+let player29 = {
+  name: "Mateo Podrug",
+  matches: 1,
+  points: 9,
+  rebounds: 1,
+  assists: 1,
+  blocks: 0,
+  stolen: 0,
+  shots_hit: 5,
+  shots_missed: 15,
+  three_hit: 2,
+  three_missed: 3,
+  freethrows_hit: 1,
+  freethrows_missed: 1
+}
+
+let player30 = {
+  name: "Tomislav Mirčeta",
+  matches: 1,
+  points: 4,
+  rebounds: 4,
+  assists: 2,
+  blocks: 0,
+  stolen: 2,
+  shots_hit: 2,
+  shots_missed: 18,
+  three_hit: 2,
+  three_missed: 14,
+  freethrows_hit: 0,
+  freethrows_missed: 1
+}
+
 // Ulomak za najbolje:
 
 export function playerBest() {
-let playersPoints = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
-const poredak = playersPoints.map(({ name, points_average }) => ({ name, points_average })).sort((a,b) => b.points_average - a.points_average);
+let playersPoints = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28, player30];
+
+const poredak = playersPoints.map(({ name, matches, points_average }) => ({ name, matches, points_average })).sort((a,b) => b.points_average - a.points_average);
 
 const elementno1 = document.querySelector('.skor-prvi-ime'); 
 elementno1.append(poredak[0].name);
 const elementno2 = document.querySelector('.skor-prvi-broj'); 
-elementno2.append(poredak[0].points_average);
+elementno2.append(poredak[0].points_average.toFixed(1));
 const elementno3 = document.querySelector('.skor-drugi-ime'); 
 elementno3.append(poredak[1].name);
 const elementno4 = document.querySelector('.skor-drugi-broj'); 
-elementno4.append(poredak[1].points_average);
+elementno4.append(poredak[1].points_average.toFixed(1));
 const elementno5 = document.querySelector('.skor-trechi-ime'); 
 elementno5.append(poredak[2].name);
 const elementno6 = document.querySelector('.skor-trechi-broj'); 
 elementno6.append(poredak[2].points_average);
 
-let playersRebounds = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersRebounds = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player28, player29, player30];
 const poredakSkoka = playersRebounds.map(({ name, rebounds_average }) => ({ name, rebounds_average })).sort((a,b) => b.rebounds_average - a.rebounds_average);
 
 const elementno7 = document.querySelector('.skokovi-prvi-ime'); 
 elementno7.append(poredakSkoka[0].name);
 const elementno8 = document.querySelector('.skokovi-prvi-broj'); 
-elementno8.append(poredakSkoka[0].rebounds_average);
+elementno8.append(poredakSkoka[0].rebounds_average.toFixed(1));
 const elementno9 = document.querySelector('.skokovi-drugi-ime'); 
 elementno9.append(poredakSkoka[1].name);
 const elementno10 = document.querySelector('.skokovi-drugi-broj'); 
-elementno10.append(poredakSkoka[1].rebounds_average);
+elementno10.append(poredakSkoka[1].rebounds_average.toFixed(1));
 const elementno11 = document.querySelector('.skokovi-trechi-ime'); 
 elementno11.append(poredakSkoka[2].name);
 const elementno12 = document.querySelector('.skokovi-trechi-broj'); 
 elementno12.append(poredakSkoka[2].rebounds_average);
 
-let playersAssists = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersAssists = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player25, player26, player27, player28, player29, player30, player4];
 const poredakAsista = playersAssists.map(({ name, assists_average }) => ({ name, assists_average })).sort((a,b) => b.assists_average - a.assists_average);
 
 const elementno13 = document.querySelector('.asisti-prvi-ime'); 
 elementno13.append(poredakAsista[0].name);
 const elementno14 = document.querySelector('.asisti-prvi-broj'); 
-elementno14.append(poredakAsista[0].assists_average);
+elementno14.append(poredakAsista[0].assists_average.toFixed(1));
 const elementno15 = document.querySelector('.asisti-drugi-ime'); 
 elementno15.append(poredakAsista[1].name);
 const elementno16 = document.querySelector('.asisti-drugi-broj'); 
@@ -484,13 +533,13 @@ elementno17.append(poredakAsista[2].name);
 const elementno18 = document.querySelector('.asisti-trechi-broj'); 
 elementno18.append(poredakAsista[2].assists_average);
 
-let playersBlocks = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersBlocks = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player29, player30, player4];
 const poredakBlokova = playersBlocks.map(({ name, blocks_average }) => ({ name, blocks_average })).sort((a,b) => b.blocks_average - a.blocks_average);
 
 const elementno19 = document.querySelector('.blokovi-prvi-ime'); 
 elementno19.append(poredakBlokova[0].name);
 const elementno20 = document.querySelector('.blokovi-prvi-broj'); 
-elementno20.append(poredakBlokova[0].blocks_average);
+elementno20.append(poredakBlokova[0].blocks_average.toFixed(2));
 const elementno21 = document.querySelector('.blokovi-drugi-ime'); 
 elementno21.append(poredakBlokova[1].name);
 const elementno22 = document.querySelector('.blokovi-drugi-broj'); 
@@ -500,13 +549,13 @@ elementno23.append(poredakBlokova[2].name);
 const elementno24 = document.querySelector('.blokovi-trechi-broj'); 
 elementno24.append(poredakBlokova[2].blocks_average);
 
-let playersStolen = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersStolen = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28, player29, player30, player4];
 const poredakKradja = playersStolen.map(({ name, stolen_average }) => ({ name, stolen_average })).sort((a,b) => b.stolen_average - a.stolen_average);
 
 const elementno25 = document.querySelector('.stolen-prvi-ime'); 
 elementno25.append(poredakKradja[0].name);
 const elementno26 = document.querySelector('.stolen-prvi-broj'); 
-elementno26.append(poredakKradja[0].stolen_average);
+elementno26.append(poredakKradja[0].stolen_average.toFixed(2));
 const elementno27 = document.querySelector('.stolen-drugi-ime'); 
 elementno27.append(poredakKradja[1].name);
 const elementno28 = document.querySelector('.stolen-drugi-broj'); 
@@ -516,7 +565,7 @@ elementno29.append(poredakKradja[2].name);
 const elementno30 = document.querySelector('.stolen-trechi-broj'); 
 elementno30.append(poredakKradja[2].stolen_average);
 
-let playersShothit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersShothit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28, player29, player30];
 const poredakTrica = playersShothit.map(({ name, shots_percentage }) => ({ name, shots_percentage })).sort((a,b) => b.shots_percentage - a.shots_percentage);
 
 const elementno31 = document.querySelector('.threepct-prvi-ime'); 
@@ -532,7 +581,7 @@ elementno35.append(poredakTrica[2].name);
 const elementno36 = document.querySelector('.threepct-trechi-broj'); 
 elementno36.append(`${poredakTrica[2].shots_percentage.toFixed(2)} %`);
 
-let playersThreehit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersThreehit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28, player30, player4];
 const poredakTrojki = playersThreehit.map(({ name, three_percentage }) => ({ name, three_percentage })).sort((a,b) => b.three_percentage - a.three_percentage);
 
 const elementno37 = document.querySelector('.trojke-prvi-ime'); 
@@ -548,7 +597,7 @@ elementno41.append(poredakTrojki[2].name);
 const elementno42 = document.querySelector('.trojke-trechi-broj'); 
 elementno42.append(`${poredakTrojki[2].three_percentage.toFixed(2)} %`);
 
-let playersFreehit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28];
+let playersFreehit = [player1, player2, player3, player5, player6, player7, player8, player9, player10, player11, player12, player13, player14, player15, player16, player17, player18, player19, player20, player21, player22, player23, player24, player25, player26, player27, player28, player30, player4];
 const poredakFt = playersFreehit.map(({ name, freethrows_percentage }) => ({ name, freethrows_percentage })).sort((a,b) => b.freethrows_percentage - a.freethrows_percentage);
 
 const elementno43 = document.querySelector('.ft-prvi-ime'); 
@@ -566,13 +615,13 @@ elementno48.append(`${poredakFt[2].freethrows_percentage.toFixed(2)} %`);
 }
 
 export function teamstatsOne() {
-  let playerOne = [player1.points_average, player1.rebounds_average, player1.assists_average, player1.blocks_average, player1.stolen_average, `${player1.shots_percentage.toFixed(1)} %`, `${player1.three_percentage.toFixed(1)} %`, `${player1.freethrows_percentage} %`];
+  let playerOne = [player1.points_average.toFixed(1), player1.rebounds_average.toFixed(1), player1.assists_average.toFixed(1), player1.blocks_average.toFixed(1), player1.stolen_average.toFixed(1), `${player1.shots_percentage.toFixed(1)} %`, `${player1.three_percentage.toFixed(1)} %`, `${player1.freethrows_percentage} %`];
   for (let i = 0; i < playerOne.length; i++){
     const element = document.querySelector('.element-01' + i);
     element.append(playerOne[i]);
   }
 
-  let playerTwo = [player2.points_average, player2.rebounds_average, player2.assists_average, player2.blocks_average, player2.stolen_average, `${player2.shots_percentage.toFixed(1)} %`, `${player2.three_percentage.toFixed(1)} %`, `${player2.freethrows_percentage.toFixed(2)} %`];
+  let playerTwo = [player2.points_average, player2.rebounds_average.toFixed(1), player2.assists_average.toFixed(1), player2.blocks_average.toFixed(1), player2.stolen_average.toFixed(1), `${player2.shots_percentage.toFixed(1)} %`, `${player2.three_percentage.toFixed(1)} %`, `${player2.freethrows_percentage.toFixed(2)} %`];
   for (let i = 0; i < playerTwo.length; i++){
     const element = document.querySelector('.element-02' + i);
     element.append(playerTwo[i]);
@@ -621,10 +670,16 @@ export function teamstatsTwo() {
     const element = document.querySelector('.element-24' + i);
     element.append(playerTwentyfour[i]);
   }
+
+  let playerTwentynine = [player29.points_average, player29.rebounds_average, player29.assists_average, player29.blocks_average, player29.stolen_average, `${player29.shots_percentage.toFixed(2)} %`, `${player29.three_percentage.toFixed(2)} %`, `${player29.freethrows_percentage} %`];
+  for (let i = 0; i < playerTwentynine.length; i++){
+    const element = document.querySelector('.element-29' + i);
+    element.append(playerTwentynine[i]);
+  }
 }
 
 export function teamstatsThree() {
-  let playerNine = [player9.points_average, player9.rebounds_average, player9.assists_average, player9.blocks_average, player9.stolen_average, `${player9.shots_percentage.toFixed(2)} %`, `${player9.three_percentage.toFixed(2)} %`, `${player9.freethrows_percentage} %`];
+  let playerNine = [player9.points_average, player9.rebounds_average.toFixed(1), player9.assists_average.toFixed(1), player9.blocks_average.toFixed(1), player9.stolen_average.toFixed(1), `${player9.shots_percentage.toFixed(2)} %`, `${player9.three_percentage.toFixed(2)} %`, `${player9.freethrows_percentage} %`];
   for (let i = 0; i < playerNine.length; i++){
     const element = document.querySelector('.element-09' + i);
     element.append(playerNine[i]);
@@ -646,6 +701,12 @@ export function teamstatsThree() {
   for (let i = 0; i < playerThirteen.length; i++){
     const element = document.querySelector('.element-13' + i);
     element.append(playerThirteen[i]);
+  }
+
+  let playerFour = [player4.points_average, player4.rebounds_average, player4.assists_average, player4.blocks_average, player4.stolen_average, `${player4.shots_percentage.toFixed(2)} %`, `${player4.three_percentage.toFixed(2)} %`, `${player4.freethrows_percentage} %`];
+  for (let i = 0; i < playerFour.length; i++){
+    const element = document.querySelector('.element-04' + i);
+    element.append(playerFour[i]);
   }
 }
 
@@ -678,6 +739,12 @@ export function teamstatsFour() {
   for (let i = 0; i < playerTwentyfive.length; i++){
     const element = document.querySelector('.element-25' + i);
     element.append(playerTwentyfive[i]);
+  }
+
+  let playerThirty = [player30.points_average, player30.rebounds_average, player30.assists_average, player30.blocks_average, player30.stolen_average, `${player30.shots_percentage.toFixed(2)} %`, `${player30.three_percentage.toFixed(2)} %`, `${player30.freethrows_percentage} %`];
+  for (let i = 0; i < playerThirty.length; i++){
+    const element = document.querySelector('.element-30' + i);
+    element.append(playerThirty[i]);
   }
 }
 
@@ -777,6 +844,24 @@ matchStats(player5, 1, 2, 0, 0, 1, 1, 3, 0, 0, 0, 1);
 matchStats(player20, 0, 4, 1, 0, 2, 0, 4, 0, 2, 0, 0);
 matchStats(player21, 2, 2, 5, 1, 2, 2, 13, 0, 5, 0, 1);
 matchStats(player22, 1, 1, 1, 0, 0, 1, 3, 0, 1, 0, 1);
+matchStats(player11, 9, 8, 3, 0, 1, 8, 17, 0, 3, 1, 3);
+matchStats(player9, 2, 20, 11, 3, 5, 2, 11, 0, 3, 0, 2);
+matchStats(player21, 5, 13, 1, 1, 6, 4, 28, 1, 13, 0, 2);
+matchStats(player22, 1, 8, 1, 0, 1, 1, 7, 0, 2, 0, 0);
+matchStats(player20, 2, 3, 3, 1, 0, 2, 19, 0, 9, 0, 0);
+matchStats(player2, 10, 10, 3, 0, 4, 9, 23, 1, 5, 0, 2);
+matchStats(player1, 2, 4, 0, 0, 0, 2, 14, 0, 7, 0, 1);
+matchStats(player5, 2, 6, 7, 0, 4, 2, 10, 0, 2, 0, 0);
+matchStats(player26, 7, 11, 0, 1, 0, 7, 12, 0, 1, 0, 1);
+matchStats(player16, 5, 4, 1, 0, 0, 2, 16, 1, 13, 2, 2);
+matchStats(player27, 1, 17, 1, 2, 4, 1, 6, 0, 0, 0, 0);
+matchStats(player19, 5, 3, 0, 0, 1, 5, 13, 0, 4, 0, 0);
+matchStats(player8, 1, 7, 1, 0, 0, 1, 4, 0, 0, 0, 0);
+matchStats(player6, 4, 6, 2, 1, 1, 2, 10, 2, 8, 0, 0);
+matchStats(player7, 7, 9, 2, 0, 3, 5, 8, 2, 4, 0, 3);
+matchStats(player25, 4, 5, 1, 0, 4, 2, 13, 2, 11, 0, 0);
+matchStats(player15, 5, 7, 0, 0, 1, 4, 13, 1, 7, 0, 0);
+matchStats(player30, 4, 4, 2, 0, 2, 2, 18, 2, 14, 0, 0);
 
 console.log(player1.matches);
 console.log(player1.points);
@@ -1135,6 +1220,45 @@ player28.three_missed_average = player28.three_missed / player28.matches;
 player28.shots_percentage = (player28.shots_hit / player28.shots_missed) * 100;
 player28.three_percentage = (player28.three_hit / player28.three_missed) * 100;
 player28.freethrows_percentage = (player28.freethrows_hit / player28.freethrows_missed) * 100;
+
+player29.points_average = player29.points / player29.matches;
+player29.rebounds_average = player29.rebounds / player29.matches;
+player29.assists_average = player29.assists / player29.matches;
+player29.blocks_average = player29.blocks / player29.matches;
+player29.stolen_average = player29.stolen / player29.matches;
+player29.shots_hit_average = player29.shots_hit / player29.matches;
+player29.shots_missed_average = player29.shots_missed / player29.matches;
+player29.three_hit_average = player29.three_hit / player29.matches;
+player29.three_missed_average = player29.three_missed / player29.matches;
+player29.shots_percentage = (player29.shots_hit / player29.shots_missed) * 100;
+player29.three_percentage = (player29.three_hit / player29.three_missed) * 100;
+player29.freethrows_percentage = (player29.freethrows_hit / player29.freethrows_missed) * 100;
+
+player30.points_average = player30.points / player30.matches;
+player30.rebounds_average = player30.rebounds / player30.matches;
+player30.assists_average = player30.assists / player30.matches;
+player30.blocks_average = player30.blocks / player30.matches;
+player30.stolen_average = player30.stolen / player30.matches;
+player30.shots_hit_average = player30.shots_hit / player30.matches;
+player30.shots_missed_average = player30.shots_missed / player30.matches;
+player30.three_hit_average = player30.three_hit / player30.matches;
+player30.three_missed_average = player30.three_missed / player30.matches;
+player30.shots_percentage = (player30.shots_hit / player30.shots_missed) * 100;
+player30.three_percentage = (player30.three_hit / player30.three_missed) * 100;
+player30.freethrows_percentage = (player30.freethrows_hit / player30.freethrows_missed) * 100;
+
+player4.points_average = player4.points / player4.matches;
+player4.rebounds_average = player4.rebounds / player4.matches;
+player4.assists_average = player4.assists / player4.matches;
+player4.blocks_average = player4.blocks / player4.matches;
+player4.stolen_average = player4.stolen / player4.matches;
+player4.shots_hit_average = player4.shots_hit / player4.matches;
+player4.shots_missed_average = player4.shots_missed / player4.matches;
+player4.three_hit_average = player4.three_hit / player4.matches;
+player4.three_missed_average = player4.three_missed / player4.matches;
+player4.shots_percentage = (player4.shots_hit / player4.shots_missed) * 100;
+player4.three_percentage = (player4.three_hit / player4.three_missed) * 100;
+player4.freethrows_percentage = (player4.freethrows_hit / player4.freethrows_missed) * 100;
 
 console.log(player12.shots_hit);
 console.log(player12.shots_missed);
