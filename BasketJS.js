@@ -97,6 +97,9 @@ matchDay(team1, team3, 21, 16);
 matchDay(team6, team4, 21, 8);
 matchDay(team2, team3, 21, 11);
 matchDay(team1, team5, 21, 13);
+matchDay(team1, team6, 18, 21);
+matchDay(team2, team5, 21, 13);
+matchDay(team3, team4, 21, 16);
 
 team1.diff = team1.scores - team1.against;
 team2.diff = team2.scores - team2.against;
