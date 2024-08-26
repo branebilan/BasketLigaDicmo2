@@ -677,6 +677,12 @@ export function teamstatsOne() {
     const element = document.querySelector('.element-26' + i);
     element.append(playerTwentysix[i]);
   }
+
+  let playerThirtytwo = [player32.points_average.toFixed(1), player32.rebounds_average.toFixed(1), player32.assists_average.toFixed(1), player32.blocks_average.toFixed(1), player32.stolen_average.toFixed(1), `${player32.shots_percentage.toFixed(2)} %`, `${player32.three_percentage.toFixed(2)} %`, `${player32.freethrows_percentage} %`];
+  for (let i = 0; i < playerThirtytwo.length; i++){
+    const element = document.querySelector('.element-32' + i);
+    element.append(playerThirtytwo[i]);
+  }
 } 
 
 export function teamstatsTwo() {
@@ -708,6 +714,12 @@ export function teamstatsTwo() {
   for (let i = 0; i < playerTwentynine.length; i++){
     const element = document.querySelector('.element-29' + i);
     element.append(playerTwentynine[i]);
+  }
+
+  let playerThirtyone = [player31.points_average, player31.rebounds_average, player31.assists_average, player31.blocks_average.toFixed(1), player31.stolen_average.toFixed(1), `${player31.shots_percentage.toFixed(2)} %`, `${player31.three_percentage.toFixed(2)} %`, `${player31.freethrows_percentage} %`];
+  for (let i = 0; i < playerThirtyone.length; i++){
+    const element = document.querySelector('.element-31' + i);
+    element.append(playerThirtyone[i]);
   }
 }
 
@@ -1342,6 +1354,45 @@ player4.three_missed_average = player4.three_missed / player4.matches;
 player4.shots_percentage = (player4.shots_hit / player4.shots_missed) * 100;
 player4.three_percentage = (player4.three_hit / player4.three_missed) * 100;
 player4.freethrows_percentage = (player4.freethrows_hit / player4.freethrows_missed) * 100;
+
+player30.points_average = player30.points / player30.matches;
+player30.rebounds_average = player30.rebounds / player30.matches;
+player30.assists_average = player30.assists / player30.matches;
+player30.blocks_average = player30.blocks / player30.matches;
+player30.stolen_average = player30.stolen / player30.matches;
+player30.shots_hit_average = player30.shots_hit / player30.matches;
+player30.shots_missed_average = player30.shots_missed / player30.matches;
+player30.three_hit_average = player30.three_hit / player30.matches;
+player30.three_missed_average = player30.three_missed / player30.matches;
+player30.shots_percentage = (player30.shots_hit / player30.shots_missed) * 100;
+player30.three_percentage = (player30.three_hit / player30.three_missed) * 100;
+player30.freethrows_percentage = (player30.freethrows_hit / player30.freethrows_missed) * 100;
+
+player31.points_average = player31.points / player31.matches;
+player31.rebounds_average = player31.rebounds / player31.matches;
+player31.assists_average = player31.assists / player31.matches;
+player31.blocks_average = player31.blocks / player31.matches;
+player31.stolen_average = player31.stolen / player31.matches;
+player31.shots_hit_average = player31.shots_hit / player31.matches;
+player31.shots_missed_average = player31.shots_missed / player31.matches;
+player31.three_hit_average = player31.three_hit / player31.matches;
+player31.three_missed_average = player31.three_missed / player31.matches;
+player31.shots_percentage = (player31.shots_hit / player31.shots_missed) * 100;
+player31.three_percentage = (player31.three_hit / player31.three_missed) * 100;
+player31.freethrows_percentage = (player31.freethrows_hit / player31.freethrows_missed) * 100;
+
+player32.points_average = player32.points / player32.matches;
+player32.rebounds_average = player32.rebounds / player32.matches;
+player32.assists_average = player32.assists / player32.matches;
+player32.blocks_average = player32.blocks / player32.matches;
+player32.stolen_average = player32.stolen / player32.matches;
+player32.shots_hit_average = player32.shots_hit / player32.matches;
+player32.shots_missed_average = player32.shots_missed / player32.matches;
+player32.three_hit_average = player32.three_hit / player32.matches;
+player32.three_missed_average = player32.three_missed / player32.matches;
+player32.shots_percentage = (player32.shots_hit / player32.shots_missed) * 100;
+player32.three_percentage = (player32.three_hit / player32.three_missed) * 100;
+player32.freethrows_percentage = (player32.freethrows_hit / player32.freethrows_missed) * 100;
 
 console.log(player12.shots_hit);
 console.log(player12.shots_missed);
